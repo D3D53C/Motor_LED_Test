@@ -269,8 +269,4 @@ class LED_C(object):
             GPIO.output(self.pin, GPIO.LOW)
             time.sleep(0.5)
             GPIO.output(self.pin, GPIO.HIGH)
-            time.sleep(0.5
-
-    def getStatus(self):
-            print(self.LOW_HIGH)
-            return self.LOW_HIGH
+            time.sleep(0.5)
