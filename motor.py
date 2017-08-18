@@ -27,7 +27,6 @@ class Motor(object):
         gpio.setup(self.pin1, gpio.OUT)
         gpio.setup(self.pin2, gpio.OUT)
 
-        self.pwmpin.ChangeDutyCycle(initialspeed)
 
     def get_pwmpin(self):
         return self.pwmpin
