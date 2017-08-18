@@ -16,14 +16,15 @@ class Motor(object):
 
     def __init__(self, pin, pin1, pin2):
         gpio.setmode(gpio.BOARD)
-        gpio.setup(self.pwmpin, gpio.OUT)
+        
         
         
         self.pwmpin = gpio.PWM(pin, 100)
         self.pin1 = pin1
         self.pin2 = pin2
         self.percent = None
-
+        
+        gpio.setup(self.pwmpin, gpio.OUT)
         gpio.setup(self.pin1, gpio.OUT)
         gpio.setup(self.pin2, gpio.OUT)
 
@@ -54,6 +55,3 @@ class Motor(object):
     def change_speed(self, percent):
         self.percent = percent
         self.pwmpin.ChangeDutyCycle(self.percent)
-
-    def __del__(self):
-        self.change_speed(0)
