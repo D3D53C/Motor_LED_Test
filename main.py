@@ -20,16 +20,17 @@ from motor import Motor as Motor_NO
 
 LED_O = LED_NO(7)
 Motor_O = Motor_NO(11,13,15)
-    def main():
-        BuchtabenString =  " A-Z = 1-26\n"\
-                                " Ä = 27\n"\
+
+def main():
+    BuchtabenString =     " A-Z = 1-26\n"\
+                          " Ä = 27\n"\
                                 " Ü = 28\n"\
                                 " Ö = 29\n"\
                                 " 0-9 = 30-39\n"
 
-        Var = int(input("Wollen sie das Programm im Test Modus[1] starten oder im Alphabet modus[2]: "))
-        if Var == 1:
-            while True:
+    Var = int(input("Wollen sie das Programm im Test Modus[1] starten oder im Alphabet modus[2]: "))
+    if Var == 1:
+        while True:
                 Motor_O.change_speed(10)
                 LED_O.ON()
                 time.sleep(2)
@@ -50,7 +51,7 @@ Motor_O = Motor_NO(11,13,15)
                 time.sleep(2)
                 Motor_O.change_speed(0)
                 LED_O.OFF()
-        elif Var == 2:
+    elif Var == 2:
             while True:
                 Buchstabe = int(input(BuchtabenString))
                 LED_O.Alphabet(Buchstabe)
