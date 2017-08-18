@@ -3,15 +3,15 @@ import time
 import RPi.GPIO as GPIO
 
 
-class LED_C:
+class LED_C(object):
     # A-Z = 1-26
     # Ä = 27
     # Ü = 28
     # Ö = 29
     # 0-9 = 30-39
 
-    def __init__(self):
-        self.pin = 7
+    def __init__(self, pin):
+        self.pin = pin
 
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.pin, GPIO.OUT)
@@ -257,16 +257,20 @@ class LED_C:
 
     def ON(self):
         GPIO.output(self.pin, GPIO.HIGH)
-        self.LOW_HIGH = HIGH
+        self.LOW_HIGH = "HIGH"
 
     def OFF(self):
         GPIO.output(self.pin, GPIO.LOW)
-        self.LOW_HIGH = HIGH
+        self.LOW_HIGH = "LOW"
 
     def Flash(self, val):
-        self.LOW_HIGH = FLASH
+        self.LOW_HIGH = "FLASH"
         for Flash in range(val):
             GPIO.output(self.pin, GPIO.LOW)
             time.sleep(0.5)
             GPIO.output(self.pin, GPIO.HIGH)
-            time.sleep(0.5)
+            time.sleep(0.5
+
+    def getStatus(self):
+            print(self.LOW_HIGH)
+            return self.LOW_HIGH
