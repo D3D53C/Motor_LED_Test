@@ -1,4 +1,4 @@
-def main:
+def main():
   import time
   from LED import LED_C as LED_NO
   Motor = LED_NO(11)
