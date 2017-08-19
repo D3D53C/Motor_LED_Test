@@ -30,6 +30,7 @@ def main():
 
     Var = int(input("Wollen sie das Programm im Test Modus[1] starten oder im Alphabet modus[2]: "))
     if Var == 1:
+        Motor_O.clockwise()
         while True:
                 Motor_O.change_speed(10)
                 LED_O.ON()
