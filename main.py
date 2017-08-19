@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-
-"""Android.py:	Is the Code for a School Project"""
+"""Test File for Motor and LED objects"""
 import time
 
 __author__ = "Marc Steinebrunner"
