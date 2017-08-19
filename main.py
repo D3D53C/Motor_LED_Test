@@ -26,35 +26,11 @@ def main():
                                 " Ü = 28\n"\
                                 " Ö = 29\n"\
                                 " 0-9 = 30-39\n"
-
-    Var = int(input("Wollen sie das Programm im Test Modus[1] starten oder im Alphabet modus[2]: "))
-    if Var == 1:
-        Motor_O.clockwise()
-        while True:
-                Motor_O.change_speed(10)
-                LED_O.ON()
-                time.sleep(2)
-                Motor_O.change_speed(20)
-                LED_O.OFF()
-                time.sleep(2)
-                Motor_O.change_speed(50)
-                LED_O.ON()
-                time.sleep(2)
-                Motor_O.change_speed(99)
-                LED_O.Flash(5)
-                time.sleep(5)
-                Motor_O.change_speed(50)
-                LED_O.OFF()
-                time.sleep(2)
-                Motor_O.change_speed(10)
-                LED_O.ON()
-                time.sleep(2)
-                Motor_O.change_speed(0)
-                LED_O.OFF()
-    elif Var == 2:
-            while True:
-                Buchstabe = int(input(BuchtabenString))
-                LED_O.Alphabet(Buchstabe)
-
+    
+    Motor_O.clockwise()
+    while True:
+        Var = int(input("Welchen Speed (0 - 99)"))
+        Motor_O.change_speed(Var)
+    
 if __name__ == '__main__':
     main()
