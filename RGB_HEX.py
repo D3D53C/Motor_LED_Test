@@ -6,5 +6,5 @@ print("G = {}".format(int(h[2:2+2], 16)))
 print("B = {}".format(int(h[4:4+2], 16)))
 
 s1 = []
-s1.add(int(h[(i*2):(i*2)+2], 16)) for i in range(0, 2)))
+s1.add(int(h[(i*2):(i*2)+2], 16)) for i in range(0, 2)
 print("RGB => {}, {}, {}".format(s1[i] for i in range(2))
