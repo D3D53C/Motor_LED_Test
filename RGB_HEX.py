@@ -8,4 +8,4 @@ print("B = {}".format(int(h[4:4+2], 16)))
 s1 = [0, 1, 2]
 for i in range (2):
   s1[i] = int(h[(i*2):(i*2)+2], 16))
-print("RGB => {}, {}, {}".format()
+print("RGB => {}, {}, {}".format(s1[i] for i in range(2))
