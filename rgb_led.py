@@ -43,6 +43,4 @@ class RGB_LED(object):
         for i in range(0,2):
             self.PWM[i].stop()
 
-    def __del__(self):
-        for i in range(0 ,2):
-            GPIO.cleanup(self.Pin)
+    
