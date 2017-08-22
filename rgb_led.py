@@ -29,9 +29,9 @@ class RGB_LED(object):
 
 
     def hex_to_rgb(self, hex):
-        self.RGB[0] = (int(hex[0:0 + 2], 16)*100:255)
-        self.RGB[1] = (int(hex[2:2 + 2], 16)*100:255)
-        self.RGB[2] = (int(hex[4:4 + 2], 16)*100:255)
+        self.RGB[0] = (int(hex[0:0 + 2], 16)*100/255)
+        self.RGB[1] = (int(hex[2:2 + 2], 16)*100/255)
+        self.RGB[2] = (int(hex[4:4 + 2], 16)*100/255)
 
     def on(self, hex):
         self.hex_to_rgb(hex)
