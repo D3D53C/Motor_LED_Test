@@ -20,7 +20,7 @@ class RGB_LED(object):
         for i in (self.Pin[0],self.Pin[1],self.Pin[2]):
             GPIO.setup(i, GPIO.OUT)
 
-        self.frequenz
+        self.frequenz = 50
         
         self.PWM = [GPIO.PWM(self.Pin[0], self.frequenz), GPIO.PWM(self.Pin[1], self.frequenz), GPIO.PWM(self.Pin[2], self.frequenz)]
         self.RGB = [0, 0, 0]
