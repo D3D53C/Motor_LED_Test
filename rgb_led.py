@@ -17,8 +17,9 @@ class RGB_LED(object):
         self.Pin = [Pin_R, Pin_G, Pin_B]
         GPIO.setmode(GPIO.BOARD)
 
-        for i in (self.Pin[0],self.Pin[1],self.Pin[2]):
-            GPIO.setup(i, GPIO.OUT)
+        GPIO.setup(self.Pin[0], GPIO.OUT)
+        GPIO.setup(self.Pin[1], GPIO.OUT)
+        GPIO.setup(self.Pin[2], GPIO.OUT)
 
         self.frequenz = 50
         
